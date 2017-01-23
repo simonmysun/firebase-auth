@@ -1,0 +1,144 @@
+html, body {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#mask {
+  z-index: -1;
+}
+
+#sign-in-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: #c5e1a5;
+  overflow: hidden;
+  z-index: 0;
+}
+
+#sign-in-container:before {
+  content: "";
+  background: #8bc34a;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 5000px;
+  width: 5000px;
+  transform-origin: 50% 0%;
+  transform: translateX(-2500px) translateY(-10vh) rotate(108deg);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+  pointer-events: none;
+  z-index: -1;
+}
+
+#sign-in-container:after {
+  content: "";
+  background: #558b2f;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 5000px;
+  width: 5000px;
+  transform-origin: 50% 0%;
+  transform: translateX(-2500px) translateY(-10vh) rotate(198deg);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+  pointer-events: none;
+  z-index: -1;
+}
+
+
+#sign-in-wrapper {
+  background: #fff;
+  position: absolute;
+  width: 480px;
+  max-width: 95%;
+  max-height: 100vh;
+  margin: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 2px;
+  box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14),0 6px 30px 5px rgba(0,0,0,0.12),0 8px 10px -5px rgba(0,0,0,0.3);
+}
+
+#sign-in-header {
+  padding: 30px 45px;
+  border-radius: 2px 2px 0 0;
+  background-color: #ffc107;
+  color: #fff8e1;
+}
+
+#sign-in-header h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#sign-in-status-container {
+  width: 100%;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3), 0 3px 3px rgba(0, 0, 0, 0.3) inset;
+  background-color: #ffa000;
+  color: #fff8e1;
+}
+
+#sign-in-status-container p {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 5px 20px 5px;
+  float: left;
+  line-height: 1.5;
+}
+
+#sign-out-p {
+  float: right ! important;
+  margin-left: -35px;
+}
+
+#sign-in-footer {
+  border-radius: 0 0 2px 2px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3), 0 3px 3px rgba(0, 0, 0, 0.3) inset;
+  background-color: #ff6f00;
+  color: #bdbdbd;
+}
+
+#sign-in-footer p {
+  text-align: right;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 5px 25px 5px;
+}
+
+#sign-in-body h2 {
+  text-align: center
+}
+
+#sign-in-body p {
+  text-align: center
+}
+
+a {
+  color: #4285f4;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:active, a:hover {
+  text-decoration: underline;
+}
+
+#switch-toggle,
+#cancel-switch,
+#firebaseui-auth-container,
+
+.switch #switch-account,
+.switch #welcome-message-container {
+  display: none;
+}
+
+.signed-in #switch-toggle,
+.switch #cancel-switch,
+.switch #firebaseui-auth-container {
+  display: block;
+}
