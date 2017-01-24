@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --config ./build/webpack.prod.config.js --progress --colors --optimize-minimize --optimize-occurrence-order --optimize-dedupe",
+    "build-dev": "webpack --config ./build/webpack.dev.config.js --progress --color",
     "dev": "webpack-dev-server --config ./build/webpack.dev.config.js --progress --colors --hot --inline",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

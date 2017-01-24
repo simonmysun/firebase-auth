@@ -1,9 +1,8 @@
 module.exports = {
-  entry: [
-    './src/main.js'
-  ],
+  entry: './src/main.js',
   output: {
-    filename: './dist/scripts.[hash].js'
+    path: './dist',
+    publicPath: './'
   },
   module: {
     preLoaders: [
@@ -40,6 +39,5 @@ module.exports = {
     extensions: ['', '.js', '.json', '.jsx']
   },
   devServer: {
-    contentBase: "./dist"
   },
 };

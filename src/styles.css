@@ -110,12 +110,12 @@ html, body {
   padding: 5px 25px 5px;
 }
 
-#sign-in-body h2 {
-  text-align: center
+#sign-in-body h2, #sign-in-body h3, #sign-in-body p {
+  text-align: center;
 }
 
-#sign-in-body p {
-  text-align: center
+#user-photo {
+  width: 50%;
 }
 
 a {
