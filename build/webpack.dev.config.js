@@ -5,7 +5,8 @@ var baseWebpackConfig = require('./webpack.base.config');
 
 module.exports = merge(baseWebpackConfig, {
   output: {
-    filename: 'scripts.js'
+    filename: 'scripts.js',
+    publicPath: '/'
   },
   devtool: 'source-map',
   plugins: [
@@ -15,5 +16,8 @@ module.exports = merge(baseWebpackConfig, {
       hash: true,
       inject: true
     })
-  ]
+  ],
+  devServer: {
+    host: '0.0.0.0'
+  }
 });

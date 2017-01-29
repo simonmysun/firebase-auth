@@ -1,17 +1,11 @@
 import firebase from 'firebase';
 import firebaseui from 'firebaseui';
+
+import config from './firebase.config';
 import './../node_modules/firebaseui/dist/firebaseui.css';
 import './styles.css';
 
 const redirectUrl = '/';
-
-const config = {
-  apiKey: 'AIzaSyCUWuZo9XwNAdyPGHKOZHk6poKGetojZs0',
-  authDomain: 'psst-eac03.firebaseapp.com',
-  databaseURL: 'https://psst-eac03.firebaseio.com',
-  storageBucket: 'psst-eac03.appspot.com',
-  messagingSenderId: '716670775542',
-};
 
 const maskDom = document.getElementById('mask');
 const signInBodyDom = document.getElementById('sign-in-body');
@@ -78,9 +72,7 @@ ui.start('#firebaseui-auth-container', {
     firebase.auth.EmailAuthProvider.PROVIDER_ID,
   ],
 });
+
 signOutDom.addEventListener('click', signOut);
-signOutDom.addEventListener('touchstart', signOut);
 switchAccountDom.addEventListener('click', switchAccount);
-switchAccountDom.addEventListener('touchstart', switchAccount);
 cancelSwitchDom.addEventListener('click', switchAccount);
-cancelSwitchDom.addEventListener('touchstart', switchAccount);

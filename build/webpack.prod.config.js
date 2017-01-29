@@ -6,7 +6,8 @@ var baseWebpackConfig = require('./webpack.base.config');
 
 module.exports = merge(baseWebpackConfig, {
   output: {
-    filename: 'scripts.[hash].js'
+    filename: 'scripts.[hash].js',
+    publicPath: './'
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -33,7 +34,7 @@ module.exports = merge(baseWebpackConfig, {
       inject: true
     }),
     new CleanWebpackPlugin(['./dist'], {
-      root: path.resolve(__dirname, '../'),
+      root: path.resolve(__dirname, './../'),
       verbose: true, 
       dry: false,
     })

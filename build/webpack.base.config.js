@@ -2,7 +2,6 @@ module.exports = {
   entry: './src/main.js',
   output: {
     path: './dist',
-    publicPath: './'
   },
   module: {
     preLoaders: [
